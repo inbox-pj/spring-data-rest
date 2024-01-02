@@ -1,0 +1,2 @@
+INSERT INTO EMPLOYEES (EMAIL, FIRST_NAME, LAST_NAME) VALUES ('pankaj.jaiswal@clover.com', 'Pankaj', 'Jaiswal');
+INSERT INTO EMPLOYEES (EMAIL, FIRST_NAME, LAST_NAME) VALUES ('pankaj.jaiswal@fiserv.com', 'Jaiswal', 'Pankaj');
