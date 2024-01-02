@@ -1,0 +1,48 @@
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    # Specify the path of the OpenAPI documentation
+    path: /v1/api-docs
+
+  swagger-ui:
+    # Specify the path of the Swagger UI
+    path: /swagger-ui.html
+    # Enable or disable Swagger UI
+    enabled: true
+
+# Spring data rest configuration
+spring:
+  data:
+    rest:
+      default-page-size: 3
+      default-media-type: application/json
+
+  datasource:
+    url:  jdbc:h2:mem:spring-data-rest-db
+    driver-class-name: org.h2.Driver
+    username: clover
+    password: clover
+
+  jpa:
+    database-platform:  org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+  h2:
+    console:
+      enabled: true
+      settings:
+        trace: true
+        web-allow-others: true
+
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
